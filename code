@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.Random;
+public static void main(String[]args){
+
+ /*
+     * 0 = rock
+     * 1 = paper
+     * 2 = scissor
+     * 
+     */
+    
+     System.out.println("Enter your choice\n0 = rock\n1 = paper\n2 = scissor");
+    Scanner sc = new Scanner(System.in);
+    int user_C = sc.nextInt();
+    Random R = new Random();
+    int bot_C = R.int(3);
+
+    switch (user_C) {
+        case 0:
+            if(bot_C==1){
+            System.out.println("Computer choose Paper\nYou lose! Better luck next time");
+            }
+            else if(user_C==bot_C){
+                System.out.println("Computer choose Rock\nIt's a Tie");
+                }
+            else{
+                System.out.println("Computer choose Scissor\nYou won!");
+            }
+            break;
+        case 1:
+        if (bot_C==2){
+            System.out.println("Computer choose Scissor\nYou lose! Better luck next time");
+        }
+        else if(user_C==bot_C){
+        System.out.println("Computer choose Paper\nIt's a Tie");
+        }
+        else{
+            System.out.println("Computer choose Rock\nYou won");
+        }
+        case 2:
+        if(bot_C==0){
+            System.out.println("Computer choose Rock\nYou lose! Better luck next time");
+        }
+        else if(user_C==bot_C){
+            System.out.println("Computer choose Scissor\nIt's a Tie");
+        }
+        else{
+            System.out.println("Computer choose Paper\nYou Won");
+        }
+        default:
+        System.out.println("Enter valid choice");
+            break;
+    }
+}
